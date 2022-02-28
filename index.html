@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Strong</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: Hellix;
+    background: linear-gradient(7.28deg, #EEF5FF 0%, #FFFFFF 99.69%);
+}
+
+.outer-cont {
+    max-width: 500px;
+    margin: auto;
+}
+
+h2, h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43.21px;
+    color: #111235;
+}
+
+h1, h6, #alex-margin-tb {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 43.21px;
+    color: #111235;
+}
+
+span, h4, h5 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.21px;
+    color: #111235;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #111235;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #111235;
+}
+
+.space-below-cont {
+    margin-bottom: 100px;
+}
+
+.center-align-cont {
+    text-align: center;
+    padding: 15px;
+}
+
+.left-align-cont {
+    text-align: left;
+} 
+
+.padding-cont {
+    padding: 15px;
+}
+
+.background-color-cont {
+    background-color: #F2F8FF; 
+}
+
+.light-blue-cont {
+    padding: 60px 40px;
+    margin-bottom: 20px;
+    background-color: #E4F0FF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 25px;
+}
+
+.light-purple-cont {
+    padding: 60px 40px;
+    margin-bottom: 20px;
+    background-color: rgba(114, 122, 239, 0.1);;
+    border-radius: 25px;
+}
+
+.purple-btn {
+    padding: 20px 90px;
+    width: 300px;
+    border-radius: 35px;
+    background-color: #4b5092;
+    color: white;
+    font-family: Hellix;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .7px;
+    text-decoration: none;
+}
+
+.purple-btn:hover {
+    cursor: pointer;
+    background-color: #4b5092be;
+    transition: .6s ease color;
+    transform: translateY(20px);
+}
+
+#top-main-menu {
+    height: 65px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-three-nav {
+    display: none;
+}
+
+.workout-cont img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.workout-cont h1 {
+    margin-bottom: 30px;
+    line-height: 75px;
+}
+
+.workout-cont p {
+    margin-bottom: 60px;
+}
+
+.workout-cont span {
+  font-size: 64px;
+}  
+
+.choose-loads-cont h3 {
+    margin-bottom: 20px;
+    padding-right: 150px;
+} 
+
+.alexander-arnold-cont {
+    background: linear-gradient(99.85deg, #BAD5FF 0%, #6487BF 100%);
+}
+
+.alexander-arnold-cont h4 {
+    margin-top: 60px;
+    font-size: 40px;   
+}
+
+#alex-margin-tb {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.alexander-arnold-cont p:nth-of-type(2) {
+    margin-bottom: 60px;
+}
+
+.alexander-arnold-cont a {
+    padding: 18px 50px;
+    background-color: #ffffff;
+    color: #436Baa;   
+}
+
+.alexander-arnold-cont img {
+    margin: 80px 0 -20px;
+    width: 350px;
+}
+
+#four-text-boxes {
+  margin-bottom: 70px;
+}
+
+.benefits-cont {
+  text-align: center;
+}
+
+.benefits-cont h3 {
+    margin: 50px 0;
+    font-size: 48px;
+}
+
+.benefits-cont h5 {
+    margin-bottom: 20px;
+    width: 85%;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.benefits-cont a {
+    margin: 30px auto 0;
+}
+
+footer {
+    border-top: 1px solid #000000;
+}
+
+footer h2 {
+    margin: 30px 0;
+}
+
+footer a {
+    line-height: 24px;
+}
+
+footer h6 {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#send-icon {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 255px;
+    height: 40px;
+    border: 1px solid #f5f5f5;
+    border-radius: 7px;
+    font-size: 13px;
+    background-image: url('https://assets.codepen.io/6060109/icon-send.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+input::placeholder {
+    color: #111235;
+}
+
+#social-links {
+    margin: auto auto 80px;
+    width: 176px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#social-links img {
+    padding: 7px;
+    background-color: rgba(128, 173, 245, .2);
+    border-radius: 100%;
+    height: 32px;
+    width: 32px;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .outer-cont {
+        max-width: 1500px;
+    }
+
+    .padding-cont {
+        padding: 0;
+    }
+    
+    .outer-cont {
+        max-width: fit-content;
+    }
+
+    .choose-loads-cont, 
+    .benefits-cont, 
+    .simple-flex, 
+    .panels-img-cont, 
+    footer {
+        margin: auto 107px 100px 200px;
+    }
+
+    #top-main-menu {
+        padding: 0 100px;
+        margin: 27px 150px 100px 135px;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    #top-three-nav {
+        width: 300px;
+        display: initial;
+        display: inline-flex;
+        font-size: 16px;
+        justify-content: space-between;
+    }
+
+    #top-three-nav button {
+        border: none;
+        background: white;
+    }
+
+    .workout-cont, 
+    .choose-loads-cont, 
+    .alexander-arnold-cont, 
+    .simple-flex, 
+    .panels-img-cont {
+        display: flex;
+    }
+
+    .workout-cont {
+        margin: auto 64px 100px 135px;
+        flex-direction: row-reverse;
+    }
+
+    .workout-cont img {
+        width: 40%
+    }
+
+    #time-to-get-strong {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 55%; 
+        text-align: left;
+    }
+
+    #time-to-get-strong h1 {
+        font-size: 72px;
+    }
+
+    #time-to-get-strong span {
+        font-size: 72px;
+    }
+
+    #time-to-get-strong p {
+        width: 400px;
+    }
+
+    .choose-loads-cont img {
+        width: 40%;
+        margin-right: 120px;
+    }
+
+    .background-color-cont {
+        padding: 70px 163px auto 45px;
+        width: 520px;
+        height: 372px;
+        border-radius: 50px;
+    }
+
+    .background-color-cont h3 {
+        margin-right: 50px;
+        padding-top: 70px;
+        padding-left: 45px;
+        font-size: 48px;
+    }
+
+    .background-color-cont p {
+        margin: auto 100px 70px 47px;
+    }
+
+   .alexander-arnold-cont {
+       flex-direction: row-reverse;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .alexander-arnold-cont img {
+       margin: -15px;
+       width: 35%;
+   }
+
+   #alex-full-screen-layout {
+       text-align: left;
+       width: 30%;
+       margin-left: 40px;
+   }
+
+   .mobile-only {
+       display: none;
+   }
+
+   .desktop-only {
+       display: initial;
+   }
+
+    .simple-flex {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .light-purple-cont, .light-blue-cont {
+        padding: 30px 50px;
+    }
+
+    .benefits-cont img {
+        width: 325px;
+        height: 325px;
+    } 
+
+    .panels-img-cont {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #four-text-boxes {
+        display:grid;
+        grid-template-columns: 370px 370px;
+        grid-row: 274px 274px;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+
+    #four-text-boxes p {
+        margin-right: 20px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer h2 {
+        padding-bottom: 50px;
+    }
+
+    ul {
+        columns: 2;
+        margin-top: 50px;
+        width: 500px;
+    }
+
+    #social-links {
+        display: none;
+    }
+
+    #stay-up2-date-cont {
+        text-align: left;
+    }
+
+} 
+    </style>
+    
+</head>
+<body>
+    <body>
+        <div class="outer-cont">
+            <div id="top-main-menu">
+                <h2>Max<span>Strong</span></h2>
+                <div id="top-three-nav">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contacts</a>
+                    <button type="submit"><img src="https://assets.codepen.io/6060109/icon-search.png"></button>
+                </div>
+            </div>
+    
+            <div class="center-align-cont space-below-cont workout-cont">
+                <img src="https://assets.codepen.io/6060109/workout-vector-1.png" alt="guy working out">
+                <div id="time-to-get-strong">
+                    <h1>The time to get <span>strong</span> has come</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                    <a class="purple-btn" href="#">Contact Us</a>
+                </div>    
+            </div>
+    
+            <div class="left-align-cont space-below-cont choose-loads-cont">
+                <img src="https://assets.codepen.io/6060109/workout-vector-2.png" alt="">
+                <div class="background-color-cont padding-cont">
+                    <h3>Choose loads <span>for yourself</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                </div>    
+            </div>
+    
+            <div class="center-align-cont space-below-cont alexander-arnold-cont">
+                <div id="alex-full-screen-layout">
+                    <h4>Alexander Arnold</h4>
+                    <h6 id="alex-margin-tb">35 y.o. // 10 years experiense</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                    <a class="purple-btn" href="#">Sign up for training</a>
+                </div>    
+                <img src="https://assets.codepen.io/6060109/trainer.png" alt="a personal trainer">
+            </div>
+    
+            <div class="space-below-cont padding-cont benefits-cont">
+                <div class="simple-flex">
+                    <h3 class="desktop-only"><span>The benefits</span> of exercise</h3>
+                    <a class="purple-btn desktop-only" href="#">Get now</a>
+                </div>    
+    
+                <div class="panels-img-cont">
+                    <img src="https://assets.codepen.io/6060109/workout-vector-3.png" alt="runner">
+    
+                    <h3 class="mobile-only"><span>The benefits</span> of exercise</h3>
+                    <div id="four-text-boxes">
+                        <div class="left-align-cont light-blue-cont">
+                            <h5>Increases business flexibility</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                        </div>
+                        <div class="left-align-cont light-purple-cont">
+                            <h5>Improves mental health</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                        </div>
+                        <div class="left-align-cont light-purple-cont">
+                            <h5>Provides more energy throughout the day</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                        </div>
+                        <div class="left-align-cont light-blue-cont">
+                            <h5>Helps to find new friends</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra amet placerat mauris elementum dignissim.</p>
+                        </div>   
+                    </div>
+                </div>  
+                <a class="purple-btn mobile-only" href="#">Get now</a>
+            </div>
+        </div>  
+    
+        <footer class="center-align-cont space-below-cont">
+            <div>
+                <h2>Max<span>Strong</span></h2>
+                <p class="desktop-only">&copy; Copyright &copy; 2021 MaxStrong.</p>
+            </div>    
+            <ul>
+                <lI><a href="#">Home</a></lI>
+                <lI><a href="#">About Us</a></lI>
+                <lI><a href="#">Contact</a></lI>
+                <lI><a href="#">Our trainings</a></lI>
+                <lI><a href="#">Price</a></lI>
+                <lI><a href="#">FAQ</a></lI>        
+            </ul>
+            <div id="stay-up2-date-cont">
+                <h6>Stay up to date</h6>
+                <form>
+                    <input id="send-icon" type="email" placeholder="Your email address">
+                </form>
+                <div id="social-links">
+                    <img src="https://assets.codepen.io/6060109/icon-instagram.png" alt="instagram icon" class="resize-img">
+                    <img src="https://assets.codepen.io/6060109/icon-dribbble.png" alt="dribble icon">
+                    <img src="https://assets.codepen.io/6060109/icon-twitter.png" alt="twitter icon">
+                    <img src="https://assets.codepen.io/6060109/icon-youtube.png" alt="youtube icon">
+                </div>
+                <p class="mobile-only">&copy; Copyright &copy; 2021 MaxStrong.</p>
+            </div>
+        </footer> 
+    </body>
+</body>
+</html>
